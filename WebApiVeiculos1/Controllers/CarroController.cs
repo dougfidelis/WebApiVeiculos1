@@ -36,17 +36,5 @@ namespace WebApiVeiculos1.Controllers
             return  carroRepository.GetById(id);
         }
 
-        [HttpPut]
-        public string Update(Carro model)
-        {
-            return carroRepository.Update(model);
-        }
-
-        [HttpDelete]
-        public string Delete(int id)
-        {
-            return carroRepository.Delete(id);
-        }
-
     }
 }
