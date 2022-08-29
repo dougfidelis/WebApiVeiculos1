@@ -28,6 +28,27 @@ namespace WebApiVeiculos1.Controllers
            return motoRepo.Create(model);
            
         }
-        
+
+        [HttpGet("{id}")]
+        public Moto GetById(int id)
+        {
+            Moto moto = motoRepo.GetById(id);
+            return moto;
+            
+        }
+
+        [HttpPut]
+        public string Update(Moto model)
+        {
+            return motoRepo.Update(model);
+        }
+
+        [HttpDelete]
+        public string Delete(int id)
+        {
+            return motoRepo.Delete(id);
+        }
+
+
     }
 }
